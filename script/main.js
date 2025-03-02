@@ -1,11 +1,6 @@
-function updateClock() {
-    let now = new Date();
-    let timeString = now.toLocaleTimeString();
-    let clockElement = document.getElementById('clock');
-    clockElement.textContent = timeString;
-}
-setInterval(updateClock, 1000);
-updateClock();
+let today = new Date();
+        let formattedDate = today.toDateString();
+        document.getElementById("date").innerText = formattedDate;
 
 const buttons = document.getElementsByClassName('card-btn');
 for (const btn of buttons) {
@@ -23,6 +18,8 @@ for (const btn of buttons) {
         document.getElementById('task-increment').innerText = incrementResult;
         
         btn.setAttribute('disabled', true);
+
+        console.log(buttons.length);
 
 
     })
