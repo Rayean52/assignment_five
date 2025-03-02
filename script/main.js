@@ -8,7 +8,6 @@ setInterval(updateClock, 1000);
 updateClock();
 
 const buttons = document.getElementsByClassName('card-btn');
-
 for (const btn of buttons) {
     btn.addEventListener('click', function () {
         alert("Board Updated successfully");
@@ -22,13 +21,7 @@ for (const btn of buttons) {
         let convertedTaskIncrement = parseInt(taskIncrement);
         let incrementResult = convertedTaskIncrement + 1;
         document.getElementById('task-increment').innerText = incrementResult;
-
-        let newActivity = document.createElement('p');
-        newActivity.innerText = "You have completed the task at 12:25 pm";
-        newActivity.classList.add('bg-gray-200', 'text-sm', 'p-2', 'rounded-lg')
-        document.getElementById('add-activity').appendChild(newActivity);
-
-
+        
         btn.setAttribute('disabled', true);
 
 
